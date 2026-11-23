@@ -1,0 +1,28 @@
+country,code,standard,reduced,super_reduced,parking
+Austria,AT,20,10 / 13,,13
+Belgium,BE,21,6 / 12,,12
+Bulgaria,BG,20,9,,
+Cyprus,CY,19,5 / 9,3,
+Czechia,CZ,21,12 / 0,,
+Germany,DE,19,7,,
+Denmark,DK,25,0,,
+Estonia,EE,24,9,,
+Greece,EL,24,6 / 13 / 17,4,
+Spain,ES,21,10,4,
+Finland,FI,25.5,10 / 13.5,,
+France,FR,20,5.5 / 10,2.1,
+Croatia,HR,25,5 / 13,,
+Hungary,HU,27,5 / 18,,
+Ireland,IE,23,9 / 13.5,,
+Italy,IT,22,5 / 10,4,
+Lithuania,LT,21,5 / 12,,
+Luxembourg,LU,17,8,3,14
+Latvia,LV,21,5 / 12,,
+Malta,MT,18,5 / 7,,12
+Netherlands,NL,21,9,,
+Poland,PL,23,5 / 8,,
+Portugal,PT,23,6 / 13,,13
+Romania,RO,21,11,,
+Sweden,SE,25,6 / 12,,
+Slovenia,SI,22,5 / 9.5,,
+Slovakia,SK,23,5 / 19,,

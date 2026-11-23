@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EU VAT Landscape</title>
+  <meta name="description" content="One-screen dashboard of VAT rates across the 27 EU member states, with a checkout price check and country lookup. Built by Tanisha Mukherjee.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">€</span>
+        <div>
+          <h1>EU VAT Landscape</h1>
+          <p class="muted">Consumer VAT rates across the 27 EU member states</p>
+        </div>
+      </div>
+      <div class="meta">
+        <span class="badge" id="source-badge">Source: European Commission · updated 13 Jul 2026</span>
+      </div>
+    </header>
+
+    <p class="lede" id="lede" aria-live="polite">Loading VAT rates…</p>
+
+    <section class="kpis" aria-label="Headline figures">
+      <article class="card kpi"><span class="kpi-label">Average standard rate</span><span class="kpi-value" id="kpi-avg">—</span><span class="kpi-sub">Simple average, 27 countries</span></article>
+      <article class="card kpi"><span class="kpi-label">Highest standard rate</span><span class="kpi-value" id="kpi-max">—</span><span class="kpi-sub" id="kpi-max-c">—</span></article>
+      <article class="card kpi"><span class="kpi-label">Lowest standard rate</span><span class="kpi-value" id="kpi-min">—</span><span class="kpi-sub" id="kpi-min-c">—</span></article>
+      <article class="card kpi"><span class="kpi-label">Rates to track</span><span class="kpi-value" id="kpi-tiers">—</span><span class="kpi-sub">Distinct national rates, all tiers</span></article>
+    </section>
+
+    <main class="grid">
+      <section class="card chart-card" aria-labelledby="chart-title">
+        <div class="card-head">
+          <div>
+            <h2 id="chart-title">Standard VAT rate by country</h2>
+            <p class="muted small">Sorted high to low · dashed line = EU minimum of 15%</p>
+          </div>
+          <div class="legend small"><span class="sw sw-hi"></span>Highest / lowest<span class="sw sw-ref"></span>EU minimum</div>
+        </div>
+        <div class="chart" id="chart"></div>
+      </section>
+
+      <aside class="side">
+        <section class="card" aria-labelledby="calc-title">
+          <h2 id="calc-title">Checkout price check</h2>
+          <p class="muted small">What a consumer pays for the same net price at the standard rate.</p>
+          <label class="field-label" for="net">Net price (EUR)</label>
+          <input id="net" class="input" type="number" min="0" step="0.01" value="100" inputmode="decimal">
+          <dl class="rows" id="calc"></dl>
+        </section>
+
+        <section class="card" aria-labelledby="lookup-title">
+          <h2 id="lookup-title">Country lookup</h2>
+          <label class="field-label" for="country">Every rate tier for one country</label>
+          <select id="country" class="input"></select>
+          <dl class="rows" id="lookup"></dl>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="foot small muted">
+      Data: European Commission, Your Europe, <a href="https://europa.eu/youreurope/business/taxation/vat/vat-rules-rates/index_en.htm" target="_blank" rel="noopener">VAT rules and rates</a>. Regional regimes (e.g. Canary Islands, Azores) excluded.
+      Built by <a href="https://github.com/tanishawdh-maker" target="_blank" rel="noopener">Tanisha Mukherjee</a>.
+    </footer>
+  </div>
+  <script src="src/app.js"></script>
+</body>
+</html>
